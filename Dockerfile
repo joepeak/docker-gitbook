@@ -1,8 +1,8 @@
-FROM node:8-alpine
+FROM node:8.4-alpine
 
 MAINTAINER Joepeak <johe.heng@gmail.com>
 
-ARG VERSION=2.6.7
+ARG VERSION=3.2.3
 
 LABEL version=$VERSION
 
