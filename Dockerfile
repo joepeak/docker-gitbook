@@ -2,7 +2,7 @@ FROM node:7-alpine
 
 MAINTAINER Joepeak <johe.heng@gmail.com>
 
-ARG VERSION=3.2.2
+ARG VERSION=2.6.7
 
 LABEL version=$VERSION
 
@@ -17,4 +17,4 @@ VOLUME /srv/gitbook /srv/html
 
 EXPOSE 4000 35729
 
-CMD /usr/local/bin/gitbook serve
+CMD /usr/local/bin/gitbook serve --gitbook=${VERSION}
