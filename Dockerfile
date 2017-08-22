@@ -1,4 +1,4 @@
-FROM node:8.4-alpine
+FROM node:7-alpine
 
 MAINTAINER Joepeak <johe.heng@gmail.com>
 
