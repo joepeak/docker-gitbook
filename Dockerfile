@@ -6,6 +6,8 @@ ARG VERSION=3.2.3
 
 LABEL version=$VERSION
 
+apk add --update python
+
 # install fonts Noto Sans CJK SC for Simplified Chinese
 #RUN wget -P /raw_fonts https://noto-website-2.storage.googleapis.com/pkgs/NotoSansCJKsc-hinted.zip && \
 #    cd /raw_fonts && \
