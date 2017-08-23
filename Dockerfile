@@ -1,4 +1,4 @@
-FROM node:7-alpine
+FROM node:8.4-alpine
 
 MAINTAINER Joepeak <johe.heng@gmail.com>
 
@@ -17,4 +17,4 @@ VOLUME /srv/gitbook /srv/html
 
 EXPOSE 4000 35729
 
-CMD /usr/local/bin/gitbook serve --gitbook=${VERSION}
+CMD /usr/local/bin/gitbook serve
