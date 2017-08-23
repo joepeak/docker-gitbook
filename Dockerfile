@@ -20,12 +20,7 @@ LABEL version=$VERSION
 #    apt-get update && \
 #    apt-get install -y --no-install-recommends calibre fonts-noto fonts-noto-cjk locales-all && \
 #    rm -rf /var/lib/apt/lists/*
-RUN apk add --no-cache --virtual .gyp \
-        python \
-        make \
-        g++ \
-	
-&& npm install --global gitbook-cli ebook-convert svgexport sqlite3 nodejieba &&\
+RUN npm install --global gitbook-cli ebook-convert svgexport sqlite3 nodejieba &&\
 	gitbook fetch ${VERSION} &&\
 	npm cache clear &&\
 	rm -rf /root/.npm /tmp/*
