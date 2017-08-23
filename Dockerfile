@@ -25,7 +25,7 @@ RUN apk add --no-cache --virtual .gyp \
         make \
         g++ \
 	
-RUN npm install --global gitbook-cli ebook-convert svgexport sqlite3 nodejieba &&\
+&& npm install --global gitbook-cli ebook-convert svgexport sqlite3 nodejieba &&\
 	gitbook fetch ${VERSION} &&\
 	npm cache clear &&\
 	rm -rf /root/.npm /tmp/*
