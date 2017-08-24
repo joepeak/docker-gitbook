@@ -1,4 +1,4 @@
-FROM joepeak:node
+FROM joepeak/node
 
 MAINTAINER Joepeak <johe.heng@gmail.com>
 
