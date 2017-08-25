@@ -21,7 +21,7 @@ LABEL version=$VERSION
 #    apt-get install -y --no-install-recommends calibre fonts-noto fonts-noto-cjk locales-all && \
 #    rm -rf /var/lib/apt/lists/*
 
-RUN npm install --global gitbook-cli ebook-convert svgexport &&\
+RUN npm install --global gitbook-cli ebook-convert &&\
 	gitbook fetch ${VERSION} &&\
 	npm cache clear &&\
 	rm -rf /root/.npm /tmp/*
