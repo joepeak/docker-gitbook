@@ -20,6 +20,7 @@ LABEL version=$VERSION
 #    apt-get update && \
 #    apt-get install -y --no-install-recommends calibre fonts-noto fonts-noto-cjk locales-all && \
 #    rm -rf /var/lib/apt/lists/*
+USER root
 
 RUN npm install --global gitbook-cli ebook-convert svgexport sqlite3 nodejieba &&\
 	gitbook fetch ${VERSION} &&\
