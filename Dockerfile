@@ -24,7 +24,7 @@ LABEL version=$VERSION
 RUN npm install --global gitbook-cli ebook-convert &&\
 	gitbook fetch ${VERSION} &&\
 	npm cache clear &&\
-	rm -rf /root/.npm /tmp/*
+	rm -rf  /tmp/*
 
 ENV BOOKDIR=/srv/gitbook  HTMLDIR=/srv/html
 
