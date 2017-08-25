@@ -21,9 +21,10 @@ LABEL version=$VERSION
 #    apt-get install -y --no-install-recommends calibre fonts-noto fonts-noto-cjk locales-all && \
 #    rm -rf /var/lib/apt/lists/*
 
+#npm cache clear &&\
+
 RUN npm install --global gitbook-cli ebook-convert &&\
 	gitbook fetch ${VERSION} &&\
-	npm cache clear &&\
 	rm -rf  /tmp/*
 
 ENV BOOKDIR=/srv/gitbook  HTMLDIR=/srv/html
